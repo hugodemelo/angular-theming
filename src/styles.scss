@@ -1,1 +1,36 @@
 /* You can add global styles to this file, and also import other style files */
+
+* {
+  --light-text: hsl(0, 0%, 16%);
+  --light-background: hsl(0, 5%, 75%);
+  --dark-text: hsl(0, 0%, 89%);
+  --dark-background: hsl(0, 0%, 40%);
+}
+
+:root {
+  --text: var(--light-text);
+  --background: var(--light-background);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+[color-scheme='light'] {
+  --text: var(--light-text);
+  --background: var(--light-background);
+}
+
+[color-scheme='dark'] {
+  --text: var(--dark-text);
+  --background: var(--dark-background);
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  color: var(--text);
+  background-color: var(--background);
+}

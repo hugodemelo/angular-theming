@@ -1,5 +1,8 @@
 <header>
-    <app-theme-option *ngFor="let theme of THEMES" (click)="applyTheme(theme)" [theme]="theme">
+    <app-theme-option (click)="applyTheme(theme)"
+                      *ngFor="let theme of THEMES"
+                      [class.selected]="selectedTheme === theme"
+                      [theme]="theme">
     </app-theme-option>
 </header>
 <section>text</section>

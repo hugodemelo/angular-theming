@@ -2,11 +2,25 @@
   background-color: var(--back);
   padding: 10px;
   border-radius: 10px;
+  position: relative;
 
   &:hover {
     cursor: pointer;
     background-color: lightgray;
   }
+}
+
+:host(.selected) {
+  & > #tick{
+    display: block;
+  }
+}
+
+#tick {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 8px;
 }
 
 .brand {

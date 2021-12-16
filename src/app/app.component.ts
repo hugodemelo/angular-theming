@@ -6,7 +6,7 @@ import { Component, Inject, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
 
-  readonly THEMES = [ 'microsoft', 'netflix' ];
+  readonly THEMES = [ 'microsoft', 'netflix', 'slack' ];
   selectedTheme = this.THEMES[ 0 ];
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {

@@ -1,24 +1,89 @@
-@mixin centered {
-  display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-}
-
 :host {
   height: 100vh;
   display: grid;
-  grid-template-columns: 1fr 3fr;
+  grid-template-columns: 1fr 2fr;
   grid-template-rows: 20% auto 10%;
   background-color: var(--background);
+  color: var(--text);
 
   & > header,
   & > footer {
     grid-column-start: span 2;
-    @include centered;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+
+footer > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & > img {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  padding: 20px;
+  font-weight: lighter;
+
+  & > div.brand-color,
+  & > div.text-color {
+    font-size: 50px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
   }
 
-  & > section,
-  & > article {
-    @include centered;
+  & div.brand-color > div {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: var(--brand);
+  }
+
+  & div.text-color > div {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: var(--text);
+  }
+}
+
+article {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  padding: 20px;
+
+  & > div {
+    border-radius: 10px;
+    height: 300px;
+    width: 300px;
+  }
+  .tile1 {
+    background-color: var(--tile1);
+  }
+
+  .tile2 {
+    background-color: var(--tile2);
+  }
+
+  .tile3 {
+    background-color: var(--tile3);
+  }
+
+  .tile4 {
+    background-color: var(--tile4);
   }
 }

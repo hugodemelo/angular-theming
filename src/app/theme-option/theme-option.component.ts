@@ -14,11 +14,8 @@ export class ThemeOptionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.elementRef.nativeElement.style.setProperty('--brd', `var(--brand-${ this.theme })`);
-    this.elementRef.nativeElement.style.setProperty('--back', `var(--background-${ this.theme })`);
-    this.elementRef.nativeElement.style.setProperty('--t1', `var(--tile1-${ this.theme })`);
-    this.elementRef.nativeElement.style.setProperty('--t2', `var(--tile2-${ this.theme })`);
-    this.elementRef.nativeElement.style.setProperty('--t3', `var(--tile3-${ this.theme })`);
-    this.elementRef.nativeElement.style.setProperty('--t4', `var(--tile4-${ this.theme })`);
+    [ 'brand', 'background', 'tile1', 'tile2', 'tile3', 'tile4' ].forEach(prop => {
+      this.elementRef.nativeElement.style.setProperty(`--${ prop }`, `var(--${ prop }-${ this.theme })`);
+    });
   }
 }

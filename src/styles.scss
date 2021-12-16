@@ -16,6 +16,14 @@
   --tile2-netflix: hsl(357, 73%, 42%);
   --tile3-netflix: hsl(0, 5%, 13%);
   --tile4-netflix: hsl(60, 17%, 95%);
+
+  --brand-slack: hsl(299, 56%, 19%);
+  --text-slack: hsl(0, 0%, 25%);
+  --background-slack: hsl(0, 0%, 100%);
+  --tile1-slack: hsl(194, 86%, 58%);
+  --tile2-slack: hsl(42, 83%, 55%);
+  --tile3-slack: hsl(155, 60%, 45%);
+  --tile4-slack: hsl(341, 76%, 50%);
 }
 
 :root {
@@ -53,6 +61,16 @@
   --tile2: var(--tile2-netflix);
   --tile3: var(--tile3-netflix);
   --tile4: var(--tile4-netflix);
+}
+
+[color-scheme='slack'] {
+  --brand: var(--brand-slack);
+  --text: var(--text-slack);
+  --background: var(--background-slack);
+  --tile1: var(--tile1-slack);
+  --tile2: var(--tile2-slack);
+  --tile3: var(--tile3-slack);
+  --tile4: var(--tile4-slack);
 }
 
 body {

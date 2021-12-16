@@ -1,7 +1,7 @@
 @mixin centered {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 
 :host {
@@ -9,6 +9,7 @@
   display: grid;
   grid-template-columns: 1fr 3fr;
   grid-template-rows: 20% auto 10%;
+  background-color: var(--background);
 
   & > header,
   & > footer {
@@ -19,9 +20,5 @@
   & > section,
   & > article {
     @include centered;
-  }
-
-  & > header > div {
-    margin: 0 5rem;
   }
 }

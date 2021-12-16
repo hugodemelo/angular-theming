@@ -1,8 +1,6 @@
 import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 
-type ColorScheme = 'light' | 'dark';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,19 +8,16 @@ type ColorScheme = 'light' | 'dark';
 })
 export class AppComponent implements OnInit {
 
+  readonly THEMES = ['microsoft', 'netflix'];
+
   constructor(@Inject(DOCUMENT) private readonly document: Document) {
   }
 
   ngOnInit(): void {
-    this.#setColorScheme('dark');
+    this.applyTheme('microsoft');
   }
 
-  applyTheme({ target }: Event): void {
-    const value = (target as HTMLInputElement).value as ColorScheme;
-    this.#setColorScheme(value);
-  }
-
-  #setColorScheme(scheme: ColorScheme): void {
-    this.document.firstElementChild!.setAttribute('color-scheme', scheme);
+  applyTheme(theme: string): void {
+    this.document.firstElementChild!.setAttribute('color-scheme', theme);
   }
 }

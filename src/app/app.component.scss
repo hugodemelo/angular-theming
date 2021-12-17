@@ -70,20 +70,11 @@ article {
     border-radius: 10px;
     height: 300px;
     width: 300px;
-  }
-  .tile1 {
-    background-color: var(--tile1);
-  }
 
-  .tile2 {
-    background-color: var(--tile2);
-  }
-
-  .tile3 {
-    background-color: var(--tile3);
-  }
-
-  .tile4 {
-    background-color: var(--tile4);
+    @for $i from 1 through 4 {
+      &.tile#{$i} {
+        background-color: var(--tile#{$i});
+      }
+    }
   }
 }

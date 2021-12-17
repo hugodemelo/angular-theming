@@ -2,12 +2,14 @@ import { DOCUMENT } from '@angular/common';
 import { Component, Inject, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-root', templateUrl: './app.component.html', styleUrls: [ './app.component.scss' ],
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: [ './app.component.scss' ]
 })
 export class AppComponent implements OnInit {
 
   readonly THEMES = [ 'microsoft', 'netflix', 'slack' ];
-  selectedTheme = this.THEMES[ 0 ];
+  selectedTheme!: string;
 
   constructor(@Inject(DOCUMENT) private readonly document: Document) {
   }

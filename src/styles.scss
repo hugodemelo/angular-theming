@@ -1,6 +1,5 @@
-/* You can add global styles to this file, and also import other style files */
-
 * {
+  /* microsoft theme */
   --brand-microsoft: hsl(0, 0%, 45%);
   --text-microsoft: hsl(0, 0%, 25%);
   --background-microsoft: hsl(0, 0%, 100%);
@@ -9,6 +8,7 @@
   --tile3-microsoft: hsl(44, 100%, 50%);
   --tile4-microsoft: hsl(17, 93%, 52%);
 
+  /* netflix theme */
   --brand-netflix: hsl(357, 73%, 42%);
   --text-netflix: hsl(0, 0%, 80%);
   --background-netflix: hsl(0, 0%, 25%);
@@ -17,16 +17,23 @@
   --tile3-netflix: hsl(0, 5%, 13%);
   --tile4-netflix: hsl(60, 17%, 95%);
 
-  --brand-slack: hsl(299, 56%, 19%);
-  --text-slack: hsl(0, 0%, 25%);
-  --background-slack: hsl(0, 0%, 100%);
+  /* slack theme */
+  --brand-slack: hsl(194, 86%, 58%);
+  --text-slack: hsl(0, 0%, 80%);
+  --background-slack: hsl(299, 56%, 19%);
   --tile1-slack: hsl(194, 86%, 58%);
   --tile2-slack: hsl(42, 83%, 55%);
   --tile3-slack: hsl(155, 60%, 45%);
   --tile4-slack: hsl(341, 76%, 50%);
 }
 
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
 :root {
+  /* default values */
   --brand: var(--brand-microsoft);
   --text: var(--text-microsoft);
   --background: var(--background-microsoft);
@@ -34,13 +41,6 @@
   --tile2: var(--tile2-microsoft);
   --tile3: var(--tile3-microsoft);
   --tile4: var(--tile4-microsoft);
-}
-
-*,
-*::after,
-*::before {
-  box-sizing: border-box;
-  margin: 0;
 }
 
 [color-scheme='microsoft'] {

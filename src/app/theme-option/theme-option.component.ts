@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, ElementRef, Input, OnInit } from '@
 @Component({
   selector: 'app-theme-option',
   templateUrl: './theme-option.component.html',
-  styleUrls: [ './theme-option.component.scss' ],
+  styleUrls: ['./theme-option.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThemeOptionComponent implements OnInit {
@@ -14,8 +14,8 @@ export class ThemeOptionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    [ 'brand', 'background', 'tile1', 'tile2', 'tile3', 'tile4' ].forEach(prop => {
-      this.elementRef.nativeElement.style.setProperty(`--${ prop }`, `var(--${ prop }-${ this.theme })`);
+    ['brand', 'background', 'tile1', 'tile2', 'tile3', 'tile4'].forEach(prop => {
+      this.elementRef.nativeElement.style.setProperty(`--${prop}`, `var(--${prop}-${this.theme})`);
     });
   }
 }

@@ -1,30 +1,30 @@
 <header>
-    <app-theme-option (click)="applyTheme(theme)"
-                      *ngFor="let theme of THEMES"
-                      [class.selected]="selectedTheme === theme"
-                      [theme]="theme">
-    </app-theme-option>
+  <app-theme-option (click)="applyTheme(theme)"
+                    *ngFor="let theme of THEMES"
+                    [class.selected]="selectedTheme === theme"
+                    [theme]="theme">
+  </app-theme-option>
 </header>
 <section>
-    <div class="brand-color">
-        <div></div>
-        Brand Color
-    </div>
-    <div class="text-color">
-        <div></div>
-        Text Color
-    </div>
+  <div class="brand-color">
+    <div></div>
+    Brand Color
+  </div>
+  <div class="text-color">
+    <div></div>
+    Text Color
+  </div>
 </section>
 <article>
-    <div class="tile1">
-    </div>
-    <div class="tile2">
-    </div>
-    <div class="tile3">
-    </div>
-    <div class="tile4">
-    </div>
+  <div class="tile1">
+  </div>
+  <div class="tile2">
+  </div>
+  <div class="tile3">
+  </div>
+  <div class="tile4">
+  </div>
 </article>
 <footer>
-    <div>Made with <img alt="angular logo" src="assets/angular.svg"></div>
+  <div>Made with <img alt="angular logo" src="assets/angular.svg"></div>
 </footer>

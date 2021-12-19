@@ -43,14 +43,14 @@ section {
     gap: 20px;
   }
 
-  & div.brand-color > div {
+  & > div.brand-color > div {
     border-radius: 50%;
     height: 50px;
     width: 50px;
     background-color: var(--brand);
   }
 
-  & div.text-color > div {
+  & > div.text-color > div {
     border-radius: 50%;
     height: 50px;
     width: 50px;

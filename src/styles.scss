@@ -30,6 +30,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  transition: background-color ease 300ms;
 }
 
 :root {
@@ -43,34 +44,18 @@
   --tile4: var(--tile4-microsoft);
 }
 
-[color-scheme='microsoft'] {
-  --brand: var(--brand-microsoft);
-  --text: var(--text-microsoft);
-  --background: var(--background-microsoft);
-  --tile1: var(--tile1-microsoft);
-  --tile2: var(--tile2-microsoft);
-  --tile3: var(--tile3-microsoft);
-  --tile4: var(--tile4-microsoft);
-}
+$themes: "microsoft", "netflix", "slack";
 
-[color-scheme='netflix'] {
-  --brand: var(--brand-netflix);
-  --text: var(--text-netflix);
-  --background: var(--background-netflix);
-  --tile1: var(--tile1-netflix);
-  --tile2: var(--tile2-netflix);
-  --tile3: var(--tile3-netflix);
-  --tile4: var(--tile4-netflix);
-}
-
-[color-scheme='slack'] {
-  --brand: var(--brand-slack);
-  --text: var(--text-slack);
-  --background: var(--background-slack);
-  --tile1: var(--tile1-slack);
-  --tile2: var(--tile2-slack);
-  --tile3: var(--tile3-slack);
-  --tile4: var(--tile4-slack);
+@each $theme in $themes {
+  [color-scheme=#{$theme}] {
+    --brand: var(--brand-#{$theme});
+    --text: var(--text-#{$theme});
+    --background: var(--background-#{$theme});
+    --tile1: var(--tile1-#{$theme});
+    --tile2: var(--tile2-#{$theme});
+    --tile3: var(--tile3-#{$theme});
+    --tile4: var(--tile4-#{$theme});
+  }
 }
 
 body {
